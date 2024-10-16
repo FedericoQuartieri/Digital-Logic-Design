@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="project_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="project_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="283977110fs"></ZoomStartTime>
+      <ZoomEndTime time="1143204579fs"></ZoomEndTime>
+      <Cursor1Time time="1000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="27" />
+   <wvobject type="logic" fp_name="/project_tb/UUT/i_clk">
+      <obj_property name="ElementShortName">i_clk</obj_property>
+      <obj_property name="ObjectShortName">i_clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/project_tb/UUT/i_rst">
+      <obj_property name="ElementShortName">i_rst</obj_property>
+      <obj_property name="ObjectShortName">i_rst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/project_tb/UUT/i_start">
+      <obj_property name="ElementShortName">i_start</obj_property>
+      <obj_property name="ObjectShortName">i_start</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/project_tb/UUT/i_add">
+      <obj_property name="ElementShortName">i_add[15:0]</obj_property>
+      <obj_property name="ObjectShortName">i_add[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/project_tb/UUT/i_k">
+      <obj_property name="ElementShortName">i_k[9:0]</obj_property>
+      <obj_property name="ObjectShortName">i_k[9:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/project_tb/UUT/o_done">
+      <obj_property name="ElementShortName">o_done</obj_property>
+      <obj_property name="ObjectShortName">o_done</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/project_tb/UUT/o_mem_addr">
+      <obj_property name="ElementShortName">o_mem_addr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">o_mem_addr[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/project_tb/UUT/i_mem_data">
+      <obj_property name="ElementShortName">i_mem_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">i_mem_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/project_tb/UUT/o_mem_data">
+      <obj_property name="ElementShortName">o_mem_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">o_mem_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/project_tb/UUT/o_mem_we">
+      <obj_property name="ElementShortName">o_mem_we</obj_property>
+      <obj_property name="ObjectShortName">o_mem_we</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/project_tb/UUT/o_mem_en">
+      <obj_property name="ElementShortName">o_mem_en</obj_property>
+      <obj_property name="ObjectShortName">o_mem_en</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/project_tb/UUT/cur_state">
+      <obj_property name="ElementShortName">cur_state</obj_property>
+      <obj_property name="ObjectShortName">cur_state</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/project_tb/UUT/next_state">
+      <obj_property name="ElementShortName">next_state</obj_property>
+      <obj_property name="ObjectShortName">next_state</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/project_tb/UUT/k_sel">
+      <obj_property name="ElementShortName">k_sel</obj_property>
+      <obj_property name="ObjectShortName">k_sel</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/project_tb/UUT/k_load">
+      <obj_property name="ElementShortName">k_load</obj_property>
+      <obj_property name="ObjectShortName">k_load</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/project_tb/UUT/add_sel">
+      <obj_property name="ElementShortName">add_sel</obj_property>
+      <obj_property name="ObjectShortName">add_sel</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/project_tb/UUT/add_load">
+      <obj_property name="ElementShortName">add_load</obj_property>
+      <obj_property name="ObjectShortName">add_load</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/project_tb/UUT/c_sel_beg">
+      <obj_property name="ElementShortName">c_sel_beg</obj_property>
+      <obj_property name="ObjectShortName">c_sel_beg</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/project_tb/UUT/c_load">
+      <obj_property name="ElementShortName">c_load</obj_property>
+      <obj_property name="ObjectShortName">c_load</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/project_tb/UUT/o_reg_k">
+      <obj_property name="ElementShortName">o_reg_k[9:0]</obj_property>
+      <obj_property name="ObjectShortName">o_reg_k[9:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/project_tb/UUT/mux_reg_k">
+      <obj_property name="ElementShortName">mux_reg_k[9:0]</obj_property>
+      <obj_property name="ObjectShortName">mux_reg_k[9:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/project_tb/UUT/o_end">
+      <obj_property name="ElementShortName">o_end</obj_property>
+      <obj_property name="ObjectShortName">o_end</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/project_tb/UUT/k_sub">
+      <obj_property name="ElementShortName">k_sub[9:0]</obj_property>
+      <obj_property name="ObjectShortName">k_sub[9:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/project_tb/UUT/o_reg_add">
+      <obj_property name="ElementShortName">o_reg_add[15:0]</obj_property>
+      <obj_property name="ObjectShortName">o_reg_add[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/project_tb/UUT/mux_reg_add">
+      <obj_property name="ElementShortName">mux_reg_add[15:0]</obj_property>
+      <obj_property name="ObjectShortName">mux_reg_add[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/project_tb/UUT/o_reg_c">
+      <obj_property name="ElementShortName">o_reg_c[4:0]</obj_property>
+      <obj_property name="ObjectShortName">o_reg_c[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/project_tb/UUT/mux_reg_c">
+      <obj_property name="ElementShortName">mux_reg_c[4:0]</obj_property>
+      <obj_property name="ObjectShortName">mux_reg_c[4:0]</obj_property>
+   </wvobject>
+</wave_config>

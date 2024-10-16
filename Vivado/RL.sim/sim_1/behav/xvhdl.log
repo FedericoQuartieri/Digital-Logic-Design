@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/media/federico/Shared/Projects/reti_logiche_project/RL.srcs/sources_1/new/10806848.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity project_reti_logiche
+INFO: [VRFC 10-163] Analyzing VHDL file "/media/federico/Shared/Projects/reti_logiche_project/tb/project_tb_multiple_start.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity project_tb_multiple_starts

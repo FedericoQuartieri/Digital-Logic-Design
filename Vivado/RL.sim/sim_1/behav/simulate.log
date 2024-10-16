@@ -1,0 +1,5 @@
+Vivado Simulator 2016.1
+Time resolution is 1 ps
+Failure: Simulation Ended! TEST PASSATO (2 SCENARIOS)
+Time: 4370 ns  Iteration: 2  Process: /project_tb_multiple_starts/test_routine  File: /media/federico/Shared/Projects/reti_logiche_project/tb/project_tb_multiple_start.vhd
+$finish called at time : 4370 ns : File "/media/federico/Shared/Projects/reti_logiche_project/tb/project_tb_multiple_start.vhd" Line 239

@@ -1,0 +1,5 @@
+Vivado Simulator 2016.1
+Time resolution is 1 ps
+Failure: Simulation Ended! TEST PASSATO (EXAMPLE)
+Time: 770100 ps  Iteration: 3  Process: /project_tb_k/test_routine  File: /media/federico/Shared/Projects/reti_logiche_project/tb/project_tb_k_zero.vhd
+$finish called at time : 770100 ps : File "/media/federico/Shared/Projects/reti_logiche_project/tb/project_tb_k_zero.vhd" Line 187

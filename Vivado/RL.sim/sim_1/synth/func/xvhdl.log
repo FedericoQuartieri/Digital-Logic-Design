@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/media/federico/Shared/Projects/reti_logiche_project/RL.sim/sim_1/synth/func/project_tb_k_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity project_reti_logiche
+INFO: [VRFC 10-163] Analyzing VHDL file "/media/federico/Shared/Projects/reti_logiche_project/tb/project_tb_k_zero.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity project_tb_k
