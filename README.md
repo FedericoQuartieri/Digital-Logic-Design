@@ -6,7 +6,8 @@
 
 <div style="float:right;margin-left:0px; margin-right:0px">
 
-![[resources/politecnico-di-milano-logo-vector-1-cropped(1).svg]]
+![ScreenShot](resources/politecnico-di-milano-logo-vector-1-cropped(1).svg)
+
 </div>
 
 </div>
@@ -38,14 +39,17 @@ Anno accademico 2023/2024
 
 <div style = "page-break-before:always"></div>
 
-![[resources/Pasted image 20240614131424.png]]
+
+![ScreenShot](resources/index.png)
 
 <div style = "page-break-before:always"></div>
 
 # Introduzione
+
 <html>
 &nbsp
 </html>
+
 Il progetto consiste nello sviluppo di un componente hardware in VHDL che si interfacci con una memoria esterna. Dato un indirizzo di memoria iniziale e un numero k di elementi da leggere, il componente deve modificare una sequenza di interi in memoria.
 
 Il componente riceverà in input prima un segnale di *reset* e successivamente un segnale di *start* (che indica la richiesta di codifica)
@@ -185,17 +189,23 @@ Esempio con memoria prima e dopo l'esecuzione
 		<td style = "font-size:7px; vertical-align:middle; text-align:center">30</td>
 	</tr>
 </table>
+
+
+
 <html>
 <html>&nbsp
 &nbsp</html>
 </html>
+
 # Architettura
+
 <html>
 &nbsp
 </html>
+
 L'architettura del componente sintetizzato è la seguente
 
-![[resources/complete.png]]
+![ScreenShot](resources/complete.png)
 
 Si interfaccia con un componente di memoria, tramite i seguenti segnali:
 
@@ -235,15 +245,21 @@ I 4 sottomoduli sono i seguenti:
 Note per le figure seguenti: 
 - Le costanti sono rappresentate in esadecimale per facilitarne la rappresentazione, per esempio nel secondo modulo la costante da sottrarre è rappresentata con 2 cifre essendo un numero a 8 bit.
 - Ogni segnale può essere di un numero diverso di bit, questa informazione è visible nei segnali di input e di output 
+
+
+
 <html>
 <html>&nbsp
 &nbsp</html>
 </html>
+
 ## Modulo 1
+
 <html>
 &nbsp
 </html>
-![[resources/k.png]]
+
+![ScreenShot](resources/k.png)
 
 Ingressi:
 - *i_k* (input componente)
@@ -263,17 +279,23 @@ Il primo multiplexer serve a selezionare se nel registro venga salvato *i_k* (*k
 *k_load* viene posto ad 1 per aggiornare il registro.
 
 Questo modulo serve a calcolare il nuovo k, decrementandolo di 1 ad ogni lettura, e a notificare se si è raggiunti la fine di un esecuzione, portando ad 1 il valore di *o_end* se k = 0.
+
+
+
 <html>
 <html>&nbsp
 &nbsp</html>
 </html>
+
 <div style = "page-break-before:always"></div>
 
 ## Modulo 2
+
 <html>
 &nbsp
 </html>
-![[resources/c.png]]
+
+![ScreenShot](resources/c.png)
 
 Ingressi:
 - *c_sel* (da fsm)
@@ -301,17 +323,23 @@ Se c = 0 prima della sottrazione, 00000000 - 00000001 = 11111111 (255$_{dec}$ ; 
 Per questo motivo il nuovo valore di c, prima di essere riportato in ingresso al primo multiplexer, viene posto a 0 se uguale a 255.
 
 Questo modulo serve a calcolare il nuovo c, aggiornarlo quando necessario e portarlo in uscita affinché venga scritto in memoria quando necessario.
+
+
+
 <html>
 <html>&nbsp
 &nbsp</html>
 </html>
+
 <div style = "page-break-before:always"></div>
 
 ## Modulo 3
+
 <html>
 &nbsp
 </html>
-![[resources/add.png]]
+
+![ScreenShot](resources/add.png)
 
 Ingressi:
 - *i_add* (da input componente)
@@ -330,14 +358,18 @@ Il primo multiplexer serve a selezionare se nel registro venga salvato *i_add* (
 *add_load* viene posto ad 1 per aggiornare il registro.
 
 Questo modulo serve a calcolare il nuovo indirizzo da cui leggere in memoria, incrementandolo di 2 ad ogni lettura, e portarlo in uscita affinché venga utilizzato per definire l'indirizzo su cui scrivere in memoria quando necessario
+
 <html>
 &nbsp
 </html>
+
 ## Modulo 4
+
 <html>
 &nbsp
 </html>
-![[resources/data.png]]
+
+![ScreenShot](resources/data.png)
 
 Ingressi:
 - *i_mem_data* (da input componente)
@@ -351,12 +383,14 @@ Uscite:
 Questo modulo serve ad aggiornare data e portarlo in uscita affinché venga scritto in memoria quando necessario
 
 Il reset non avviene solamente tramite il segnale *rst* (input del componente) ma anche attraverso *my_rst* (segnale determinato dall'fsm), in particolare basta che uno dei due segnali sia posto a 1 affinche il registro resetti il suo stato
+
 <html>
 &nbsp
 </html>
+
 ## FSM
 
-![[resources/fsa.svg]]
+![ScreenShot](resources/fsa.svg)
 
 S0-S1: gestione della la fase iniziale, cioè attesa dello start e inizializzazione
 
@@ -439,27 +473,37 @@ Spiegazione dettagliata stati:
 	</table>
 </div>
 </html>
+
+
+
 <html>
 <html>&nbsp
 &nbsp</html>
 </html>
+
 <div style = "page-break-before:always"></div>
 
 # Risultati sperimentali
+
 <html>
 &nbsp
 </html>
+
 ## Sintesi
 
 **Timing Report:**
 ![image alt <](resources/pixelcut-export.png)
+
 <html>
 &nbsp
 </html>
+
 L'esecuzione di un ciclo di clock ha una durata di 3.361ns, coerentemente con la richiesta di essere minore di 20ns.
+
 <html>
 &nbsp
 </html>
+
 **Utilization Report:**
 ![image alt <](resources/utilization_report.png)
 
