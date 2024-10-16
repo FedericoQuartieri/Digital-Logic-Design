@@ -6,7 +6,7 @@
 
 <div style="float:right;margin-left:0px; margin-right:0px">
 
-![[politecnico-di-milano-logo-vector-1-cropped(1).svg]]
+![[resources/politecnico-di-milano-logo-vector-1-cropped(1).svg]]
 </div>
 
 </div>
@@ -38,14 +38,14 @@ Anno accademico 2023/2024
 
 <div style = "page-break-before:always"></div>
 
-![[Pasted image 20240614131424.png]]
+![[resources/Pasted image 20240614131424.png]]
 
 <div style = "page-break-before:always"></div>
 
 # Introduzione
-
+<html>
 &nbsp
-
+</html>
 Il progetto consiste nello sviluppo di un componente hardware in VHDL che si interfacci con una memoria esterna. Dato un indirizzo di memoria iniziale e un numero k di elementi da leggere, il componente deve modificare una sequenza di interi in memoria.
 
 Il componente riceverà in input prima un segnale di *reset* e successivamente un segnale di *start* (che indica la richiesta di codifica)
@@ -185,17 +185,17 @@ Esempio con memoria prima e dopo l'esecuzione
 		<td style = "font-size:7px; vertical-align:middle; text-align:center">30</td>
 	</tr>
 </table>
-
-&nbsp
-&nbsp
-
+<html>
+<html>&nbsp
+&nbsp</html>
+</html>
 # Architettura
-
+<html>
 &nbsp
-
+</html>
 L'architettura del componente sintetizzato è la seguente
 
-![[complete.png]]
+![[resources/complete.png]]
 
 Si interfaccia con un componente di memoria, tramite i seguenti segnali:
 
@@ -235,15 +235,15 @@ I 4 sottomoduli sono i seguenti:
 Note per le figure seguenti: 
 - Le costanti sono rappresentate in esadecimale per facilitarne la rappresentazione, per esempio nel secondo modulo la costante da sottrarre è rappresentata con 2 cifre essendo un numero a 8 bit.
 - Ogni segnale può essere di un numero diverso di bit, questa informazione è visible nei segnali di input e di output 
-
-&nbsp
-&nbsp
-
+<html>
+<html>&nbsp
+&nbsp</html>
+</html>
 ## Modulo 1
-
+<html>
 &nbsp
-
-![[k.png]]
+</html>
+![[resources/k.png]]
 
 Ingressi:
 - *i_k* (input componente)
@@ -263,17 +263,17 @@ Il primo multiplexer serve a selezionare se nel registro venga salvato *i_k* (*k
 *k_load* viene posto ad 1 per aggiornare il registro.
 
 Questo modulo serve a calcolare il nuovo k, decrementandolo di 1 ad ogni lettura, e a notificare se si è raggiunti la fine di un esecuzione, portando ad 1 il valore di *o_end* se k = 0.
-
-&nbsp
-&nbsp
-
+<html>
+<html>&nbsp
+&nbsp</html>
+</html>
 <div style = "page-break-before:always"></div>
 
 ## Modulo 2
-
+<html>
 &nbsp
-
-![[c.png]]
+</html>
+![[resources/c.png]]
 
 Ingressi:
 - *c_sel* (da fsm)
@@ -301,17 +301,17 @@ Se c = 0 prima della sottrazione, 00000000 - 00000001 = 11111111 (255$_{dec}$ ; 
 Per questo motivo il nuovo valore di c, prima di essere riportato in ingresso al primo multiplexer, viene posto a 0 se uguale a 255.
 
 Questo modulo serve a calcolare il nuovo c, aggiornarlo quando necessario e portarlo in uscita affinché venga scritto in memoria quando necessario.
-
-&nbsp
-&nbsp
-
+<html>
+<html>&nbsp
+&nbsp</html>
+</html>
 <div style = "page-break-before:always"></div>
 
 ## Modulo 3
-
+<html>
 &nbsp
-
-![[add.png]]
+</html>
+![[resources/add.png]]
 
 Ingressi:
 - *i_add* (da input componente)
@@ -330,14 +330,14 @@ Il primo multiplexer serve a selezionare se nel registro venga salvato *i_add* (
 *add_load* viene posto ad 1 per aggiornare il registro.
 
 Questo modulo serve a calcolare il nuovo indirizzo da cui leggere in memoria, incrementandolo di 2 ad ogni lettura, e portarlo in uscita affinché venga utilizzato per definire l'indirizzo su cui scrivere in memoria quando necessario
-
+<html>
 &nbsp
-
+</html>
 ## Modulo 4
-
+<html>
 &nbsp
-
-![[data.png]]
+</html>
+![[resources/data.png]]
 
 Ingressi:
 - *i_mem_data* (da input componente)
@@ -351,12 +351,12 @@ Uscite:
 Questo modulo serve ad aggiornare data e portarlo in uscita affinché venga scritto in memoria quando necessario
 
 Il reset non avviene solamente tramite il segnale *rst* (input del componente) ma anche attraverso *my_rst* (segnale determinato dall'fsm), in particolare basta che uno dei due segnali sia posto a 1 affinche il registro resetti il suo stato
-
+<html>
 &nbsp
-
+</html>
 ## FSM
 
-![[fsa.svg]]
+![[resources/fsa.svg]]
 
 S0-S1: gestione della la fase iniziale, cioè attesa dello start e inizializzazione
 
@@ -439,29 +439,29 @@ Spiegazione dettagliata stati:
 	</table>
 </div>
 </html>
-
-&nbsp
-&nbsp
-
+<html>
+<html>&nbsp
+&nbsp</html>
+</html>
 <div style = "page-break-before:always"></div>
 
 # Risultati sperimentali
-
+<html>
 &nbsp
-
+</html>
 ## Sintesi
 
 **Timing Report:**
-![image alt <](pixelcut-export.png)
-
+![image alt <](resources/pixelcut-export.png)
+<html>
 &nbsp
-
+</html>
 L'esecuzione di un ciclo di clock ha una durata di 3.361ns, coerentemente con la richiesta di essere minore di 20ns.
-
+<html>
 &nbsp
-
+</html>
 **Utilization Report:**
-![image alt <](utilization_report.png)
+![image alt <](resources/utilization_report.png)
 
 Non sono stati sintetizzati registri di tipo Latch, ma esclusivamente di tipo Flip Flop.
 
@@ -476,7 +476,7 @@ Obiettivo: controllare il caso limite in cui la memoria non ha dati e k = 0.
 Memoria iniziale= []
 Memoria dopo esecuzione = []
 
-![image alt <](test_1.png)
+![image alt <](resources/test_1.png)
 
 Come da specifica, dopo il segnale di *start*, il componente nello stato S2 alza il segnale *o_end* (poiché k = 0) e quindi passa allo stato SF, alzando il segnale *o_done*.
 
@@ -487,7 +487,7 @@ Obiettivo: controllare il caso limite in cui la memoria non è vuota ma k = 0.
 scenario 1 = [128, 0,  64, 23,   0,  12,  0,  71,  0,  0,  14,  0,  0,  0, 100,  0, 1,  0, 91,  0, 5,  0, 23,  0, 200,  0,   0,  0]
 scenario 1 dopo esecuzione = [128, 0,  64, 23,   0,  12,  0,  71,  0,  0,  14,  0,  0,  0, 100,  0, 1,  0, 91,  0, 5,  0, 23,  0, 200,  0,   0,  0]
 
-![image alt <](test_2.png)
+![image alt <](resources/test_2.png)
 
 Come da specifica, indipendentemente dalla memoria, poiché k = 0, si ha la stesso comportamento del test bench 1.
 
@@ -504,7 +504,7 @@ scenario 1 dopo esecuzione = [128, 31, 64, 31, 64, 30, 64, 29, 64, 28, 64, 27, 6
 scenario 2 = [0, 0, 0, 0, 64, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 150,  0, 1,  0, 0,  0, 5,  0, 23,  0, 0,  0,   0,  0]
 scenario 2 dopo esecuzione = [0, 0, 0, 0, 64, 31, 64, 30, 64, 29, 64, 28, 64, 27, 64, 26, 150, 31, 1, 31, 1, 30, 5, 31, 23, 31, 23, 30, 23, 29]
 
-![image alt <](test_3.png)
+![image alt <](resources/test_3.png)
 
 Come da specifica, una volta conclusa la prima esecuzione, viene portato il segnale *o_done* a 1 e successivamente portato a 0 una volta abbassato il segnale di *start*.
 Successivamente il componente resetta il registro *reg_data* e rimane nello stato S0 fino a quando non riceve il segnale di *start*, una volta ricevuto, processa la seconda richiesta di codifica correttamente
@@ -523,7 +523,7 @@ scenario 1 dopo esecuzione = [128, 31, 64, 31, 64, 30, 64, 29, 64, 28, 64, 27, 6
 scenario 2 = [0, 0, 0, 0, 64, 0,   0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 150,  0, 1,  0, 0,  0, 5,  0, 23,  0, 0,  0,   0,  0]
 scenario 2 dopo esecuzione = [0, 0, 0, 0, 64, 31, 64, 30, 64, 29, 64, 28, 64, 27, 64, 26, 150, 31, 1, 31, 1, 30, 5, 31, 23, 31, 23, 30, 23, 29]
 
-![image alt <](test_4.png)
+![image alt <](resources/test_4.png)
 
 Come da specifica, il componente, una volta ricevuto il segnale di *reset*, resetta tutti i registri e torna nello stato S0, una volta ricevuto un nuovo segnale di *start* processa la nuova richiesta di codifica correttamente.
 
@@ -537,7 +537,7 @@ Obiettivo: controllare il caso limite in cui la credibilità scende fino a 0, in
 scenario 1 = [128, 0,    0,  0,   0,  0,   0,  0,   0,  0,   0,  0,   0,  0,   0,  0,   0,  0,   0,  0,   0,  0,   0,  0,   0,  0,   0,  0,   0,  0,   0,  0,   0,  0,   0,  0,   0,  0,   0,  0,   0,  0,   0,  0,   0, 0,   0, 0,   0, 0,   0, 0,   0, 0,   0, 0,   0, 0,   0, 0,   0, 0,   0, 0,   0, 0,   0, 0, 108,  0,   0,  0]
 scenario 1 dopo esecuzione = [128, 31, 128, 30, 128, 29, 128, 28, 128, 27, 128, 26, 128, 25, 128, 24, 128, 23, 128, 22, 128, 21, 128, 20, 128, 19, 128, 18, 128, 17, 128, 16, 128, 15, 128, 14, 128, 13, 128, 12, 128, 11, 128, 10, 128, 9, 128, 8, 128, 7, 128, 6, 128, 5, 128, 4, 128, 3, 128, 2, 128, 1, 128, 0, 128, 0, 128, 0, 108, 31, 108, 30]
 
-![image alt <](test_5.png)
+![image alt <](resources/test_5.png)
 
 Come da specifica, la credibilità, una volta raggiunto il valore 0, rimane tale e non scende sotto zero, successivamente, una volta che viene letto un numero diverso da zero, viene resettata correttamente a 31.
 
