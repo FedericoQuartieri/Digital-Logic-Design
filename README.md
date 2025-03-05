@@ -1,48 +1,5 @@
-<div style="display:flex">
-
-<div style="float:left;margin:5px 20px 10px 0">
-<p style = "font-size : 1.2rem">Dipartimento di Elettronica, Informazione e Bioingegneria</p> 
-</div>
-
-<div style="float:right;margin-left:0px; margin-right:0px">
-
-![ScreenShot](resources/politecnico-di-milano-logo-vector-1-cropped(1).svg)
-
-</div>
-
-</div>
-
-<div style="max-width:fit-content; margin-left:auto; margin-right:auto;margin-top:30; text-align:center;">
-Corso di Laurea Triennale in Ingegneria Informatica
-</div>
-
-<div style="max-width:fit-content; margin-left:auto; margin-right:auto;margin-top:150; margin-bottom:350; text-align:center; font-size:22px">
-PROVA  FINALE RETI LOGICHE
-</div>
-
-
-
-
-Docente:
-Prof. Gianluca Palermo
-<div style = "display:flex; margin-left:80%">
-Relazione di: <br>
-Federico Quartieri
-</div>
-
-
-
-<div style="margin-bottom:50; margin-top:100; text-align:center; ">
-Anno accademico 2023/2024
-</div>
-
-
-<div style = "page-break-before:always"></div>
-
 
 ![ScreenShot](resources/index.png)
-
-<div style = "page-break-before:always"></div>
 
 # Introduzione
 
@@ -71,125 +28,11 @@ Note:
 - $w_{i-1}$ e $c_{i-1}$ sono intesi quelli già aggiornati dal componente
 
 
-Esempio con memoria prima e dopo l'esecuzione
+Esempio con memoria prima e dopo l'esecuzione:
 
-<table>
-	<tr>
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">128</td>
-	
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">0</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">64</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">0</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">0</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">0</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">0</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">0</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">0</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">0</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">0</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">0</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">0</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">0</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">100</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">0</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">1</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">0</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">0</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">0</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">5</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">0</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">23</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">0</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">200</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">0</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">0</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">0</td>
-	</tr>
-	<tr>
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">128</td>
-	
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">31</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">64</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">31</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">64</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">30</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">64</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">29</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">64</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">28</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">64</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">27</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">64</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">26</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">100</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">31</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">1</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">31</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">1</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">30</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">5</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">31</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">23</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">31</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">200</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">31</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">200</td>
-		
-		<td style = "font-size:7px; vertical-align:middle; text-align:center">30</td>
-	</tr>
-</table>
-
+| 128 |  0  | 64  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  0  | 100 |  0  |  1  |  0  |  0  |  0  |  5  |  0  | 23  |  0  | 200 |  0  |  0  |  0  |
+|-----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|
+| 128 | 31 | 64 | 31 | 64 | 30 | 64 | 29 | 64 | 28 | 64 | 27 | 64 | 26 | 100 | 31 | 1  | 31 | 1  | 30 | 5  | 31 | 23 | 31 | 200 | 31 | 200 | 30 |
 
 
 <html>
@@ -309,7 +152,7 @@ Costanti:
 - 0: valore da assegnare a c
 - 31: valore a cui ripristinare c
 - 1: valore da sottrarre a c
-- 255(ff$_{hex}$): valore da comparare a *c_check_zero*
+- 255(ff in esadecimale): valore da comparare a *c_check_zero*
 
 ---
 
@@ -319,7 +162,7 @@ singola esecuzione.
 
 Il secondo multiplexer serve a ripristinare c a 31 se viene letto in memoria un valore diverso da zero.
 
-Se c = 0 prima della sottrazione, 00000000 - 00000001 = 11111111 (255$_{dec}$ ; ff$_{hex}$).
+Se c = 0 prima della sottrazione, 00000000 - 00000001 = 11111111 (255 in decimake ; ff in esadecimale).
 Per questo motivo il nuovo valore di c, prima di essere riportato in ingresso al primo multiplexer, viene posto a 0 se uguale a 255.
 
 Questo modulo serve a calcolare il nuovo c, aggiornarlo quando necessario e portarlo in uscita affinché venga scritto in memoria quando necessario.
